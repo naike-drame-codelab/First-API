@@ -1,16 +1,28 @@
 # API Documentation
-This is my first API project, built using Node.js, Express.js, UUID, Nodemon and Postman for testing.
+This is my first API project, built using Express.js, UUID, Nodemon, and Postman. It provides CRUD (Create, Read, Update, Delete) operations for managing users.
 
 ## Installation
 1. Clone the repository:
    `git clone <repository-url>`
 2. Install the dependencies:
-   `npm install express uuid nodemon`
+   `npm install express dotenv nodemon uuid`
 3. Start the server:
    `nodemon api.js`
 
 ## Usage
-The API provides CRUD (Create, Read, Update, Delete) operations for managing users.
+
+#### API Key Setup
+For interacting with certain endpoints, an API key is required. Please follow these steps to set up the API key:
+1. Create a `.env` file in the root directory of the project.
+2. Add the following line to the `.env` file, replacing `<your_api_key_here>` with your desired API key:
+```javascript
+   YOUR_API_KEY=<your_api_key_here>
+```
+1. Ensure that your application reads the environment variables using `dotenv`:
+```javascript
+require('dotenv').config();
+```
+
 
 ### 1) Retrieve all users
 * URL: `/api/users`
@@ -26,8 +38,11 @@ The API provides CRUD (Create, Read, Update, Delete) operations for managing use
   * If the user is found, returns the user object.
   * If the user is not found, returns a 404 error with the message "User not found".
 
-### 3) Create a new user 
-Note: you can either use raw JSON data in the request body or setup your key/value pairs in urlencoded format.
+### 3) Create a new user
+> An API key is required for this operation. 
+
+> You can either use raw JSON data in the request body or setup your key/value pairs in urlencoded format.
+
 * URL: `/api/users`
 * Method: `POST`
 * Request Body:
@@ -41,6 +56,8 @@ Note: you can either use raw JSON data in the request body or setup your key/val
   * If any field is missing, returns a 400 error with the message "All fields are required".
 
 ### 4) Update an existing user
+> An API key is required for this operation.
+
 * URL: `/api/users/:id`
 * Method: `PUT`
 * Parameters:
@@ -57,6 +74,8 @@ Note: you can either use raw JSON data in the request body or setup your key/val
   * If any field is missing, returns a 400 error with the message "All fields are required".
 
 ### 5) Delete an existing user
+> An API key is required for this operation.
+
 * URL: `/api/users/:id`
 * Method: `DELETE`
 * Parameters:
@@ -69,4 +88,4 @@ Note: you can either use raw JSON data in the request body or setup your key/val
 To test the API endpoints, you can use a tool like Postman. Make sure the server is running, and then send requests to the appropriate endpoints with the required parameters and request body.
 
 ## Conclusion
-This API project demonstrates basic CRUD operations for managing users. Feel free to explore and modify the code to suit your needs. If you have any questions or feedback, please let me know.
+I'm really satisfied with the progress made for my first shot at this. Feel free to explore and modify the code to suit your needs. If you have any questions or feedback, please let me know.
