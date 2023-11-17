@@ -1,5 +1,23 @@
 # API Documentation
+
 This is my first API project, built using Express.js, UUID, Nodemon, and Postman. It provides CRUD (Create, Read, Update, Delete) operations for managing users.
+<hr>
+
+### [Table of Content](#table-of-content)
+
+- [API Documentation](#api-documentation)
+    - [Table of Content](#table-of-content)
+  - [Installation](#installation)
+  - [Usage](#usage)
+      - [API Key Setup](#api-key-setup)
+    - [1) Retrieve all users](#1-retrieve-all-users)
+    - [2) Retrieve a specific user by ID](#2-retrieve-a-specific-user-by-id)
+    - [3) Create a new user](#3-create-a-new-user)
+    - [4) Update an existing user](#4-update-an-existing-user)
+    - [5) Delete an existing user](#5-delete-an-existing-user)
+  - [Testing](#testing)
+  - [Conclusion](#conclusion)
+
 
 ## Installation
 1. Clone the repository:
@@ -8,6 +26,8 @@ This is my first API project, built using Express.js, UUID, Nodemon, and Postman
    `npm install express dotenv nodemon uuid`
 3. Start the server:
    `nodemon api.js`
+
+[Back to Top](#table-of-content)
 
 ## Usage
 
@@ -22,7 +42,6 @@ For interacting with certain endpoints, an API key is required. Please follow th
 ```javascript
 require('dotenv').config();
 ```
-
 
 ### 1) Retrieve all users
 * URL: `/api/users`
@@ -83,9 +102,15 @@ require('dotenv').config();
 * Response:
   * If the user is found, deletes the user and returns the deleted user object.
   * If the user is not found, returns a 404 error with the message "User not found".
+  * 
+[Back to Top](#table-of-content)
 
 ## Testing
 To test the API endpoints, you can use a tool like Postman. Make sure the server is running, and then send requests to the appropriate endpoints with the required parameters and request body.
 
+[Back to Top](#table-of-content)
+
 ## Conclusion
 I'm really satisfied with the progress made for my first shot at this. Feel free to explore and modify the code to suit your needs. If you have any questions or feedback, please let me know.
+
+[Back to Top](#table-of-content)
