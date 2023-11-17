@@ -36,7 +36,7 @@ For interacting with certain endpoints, an API key is required. Please follow th
 1. Create a `.env` file in the root directory of the project.
 2. Add the following line to the `.env` file, replacing `<your_api_key_here>` with your desired API key:
 ```javascript
-   YOUR_API_KEY=<your_api_key_here>
+YOUR_API_KEY=<your_api_key_here>
 ```
 1. Ensure that your application reads the environment variables using `dotenv`:
 ```javascript
