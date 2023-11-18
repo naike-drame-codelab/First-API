@@ -18,7 +18,6 @@ app.use(express.urlencoded({ extended: true }));
 // Function that checks if the API key provided as a query parameter is correct
 const apiKeyCheck = (req, res, next) => {
 	const apiKeyParam = req.query.api_key;
-	console.log(apiKey, apiKeyParam);
 
 	if (apiKeyParam !== apiKey) {
 		return res.status(403).json({ error: "Invalid API key" });
